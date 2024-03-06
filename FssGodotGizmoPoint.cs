@@ -5,7 +5,13 @@ using System;
 // This class extends Node3D and inherits its operations.
 // - Use Show() and Hide() to control the visibility of the gizmo.
 // - Modify the Scale property to adjust the size of the gizmo in 3D space.
-// Remember, scaling affects the entire node uniformly.
+// - object.QueueFree() should be used to delete the object.
+
+// Example:
+// var gizmoPoint = new FssGodotGizmoPoint(new Color(1.0f, 0.5f, 0.0f), 0.1f);
+// AddChild(gizmoPoint);
+// ...
+// gizmoPoint.QueueFree();
 
 public class FssGodotGizmoPoint : Node3D
 {
